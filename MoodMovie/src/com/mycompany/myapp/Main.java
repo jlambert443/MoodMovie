@@ -12,6 +12,9 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Graphics;
 import com.codename1.ui.Toolbar;
 import com.codename1.ui.layouts.BorderLayout;
+import com.codename1.ui.layouts.GridBagConstraints;
+import com.codename1.ui.layouts.GridBagLayout;
+import com.codename1.ui.layouts.Insets;
 
 
 
@@ -56,20 +59,31 @@ public class Main {
     private void View()
     {
         Form form = new Form("MoodMovie");
-//        form.add(BorderLayout.CENTER,new Component(){
-//            @Override
-//            public void paint(Graphics g) {
-//                g.setColor(0x000000);
-//                g.fillRect(getX(), getY(), getWidth(), getHeight());
-//            }
-//        });
-        form.addComponent(new Label("Bienvenue sur MoodMovie !"));
-        
-        Button begin = new Button("Commencer");
-        form.add(begin);
-        String title = "Bienvenue dans l'application";
-        begin.addActionListener((e)->Dialog.show(title, "hi","ok",null));
-        
+
+        form.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        //natural height, maximum width
+        c.fill = GridBagConstraints.HORIZONTAL;
+
+        Button button = new Button("Commencer");
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.ipady = 0;       //reset to default
+        c.weighty = 1.0;   //request any extra vertical space
+        c.anchor = GridBagConstraints.LINE_END; //bottom of space
+        c.insets = new Insets(10,0,0,0);  //top padding
+        c.gridx = 1;       //aligned with button 2
+        c.gridwidth = 2;   //2 columns wide
+        c.gridy = 2;       //third row
+        form.addComponent(c, button); 
+
+
+//        form.addComponent(new Label("Bienvenue sur MoodMovie !"));
+//        
+//        Button begin = new Button("Commencer");
+//        form.add(begin);
+//        String title = "Bienvenue dans l'application";
+//        begin.addActionListener((e)->Dialog.show(title, "hi","ok",null));
+//        
         form.show();
     }
 }

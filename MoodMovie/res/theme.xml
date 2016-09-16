@@ -99,6 +99,8 @@
     <image name="Menu.borderTopL_2.png" type="multi"  />
     <image name="Menu.borderTopR_1.png" type="multi"  />
     <image name="Menu.borderTopR_2.png" type="multi"  />
+    <image name="moodMovie"  />
+    <image name="moodMovieBackground"  />
     <theme name="MoodMovieTheme">
         <val key="@PopupDialogArrowBool" value="false" />
         <val key="@calTitleDayStyleBool" value="true" />
@@ -906,6 +908,7 @@
         <val key="Button.sel#padUnit" value="2,2,2,2" />
         <val key="Button.sel#padding" value="1,1,1,1" />
         <val key="Button.sel#transparency" value="0" />
+        <val key="Button.textDecoration" value="0" />
         <val key="Button.transparency" value="0" />
         <val key="CalendarDate.bgColor" value="3399ff" />
         <val key="CalendarDate.fgColor" value="0" />
@@ -1165,8 +1168,8 @@
         <font key="DialogTitle.font" type="ttf" face="0" style="0" size="0" name="native:MainBold" family="native:MainBold" sizeSettings="3" actualSize="4.0" />
         <val key="DialogTitle.transparency" value="0" />
         <val key="Form.bgColor" value="ffffff" />
-        <gradient key="Form.bgGradient" color1="0" color2="0" posX="0.5" posY="0.5" radius="1.0" />
-        <val key="Form.bgType" value="0" />
+        <val key="Form.bgImage" value="moodMovie" />
+        <val key="Form.bgType" value="33" />
         <val key="Form.transparency" value="255" />
         <val key="ImageViewer.margin" value="0,0,0,0" />
         <val key="ImageViewer.padding" value="0,0,0,0" />
